@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Sitio Web Estático</title>
+    <style>
+        /* Aquí puedes añadir tu CSS para dar estilo a tu página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            background-color: #eee;
+            padding: 10px;
+            margin-top: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #777;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenido a Mi Sitio Estático</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#acerca-de">Acerca de</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="inicio">
+            <h2>Inicio</h2>
+            <p>Esta es la sección de inicio de tu sitio web estático. Puedes poner aquí una breve descripción de lo que ofreces o tu mensaje principal.</p>
+        </section>
+
+        <hr> <section id="acerca-de">
+            <h2>Acerca de Nosotros</h2>
+            <p>Aquí puedes hablar sobre la historia de tu proyecto, tu misión, visión, o cualquier información relevante sobre quién eres o qué haces.</p>
+        </section>
+
+        <hr>
+
+        <section id="servicios">
+            <h2>Nuestros Servicios</h2>
+            <ul>
+                <li>Servicio 1: Descripción breve del servicio.</li>
+                <li>Servicio 2: Otra descripción del servicio.</li>
+                <li>Servicio 3: Y una más.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Puedes incluir tu información de contacto aquí, como un email o un número de teléfono.</p>
+            <p>Email: <a href="mailto:info@tusitio.com">info@tusitio.com</a></p>
+            <button id="miBoton">Haz clic aquí</button>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mi Sitio Web Estático. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Este es un ejemplo de un script JavaScript muy simple.
+        // Puedes reemplazarlo con tu propio código.
+
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('¡El sitio web se ha cargado completamente!');
+
+            const miBoton = document.getElementById('miBoton');
+            if (miBoton) {
+                miBoton.addEventListener('click', function() {
+                    alert('¡Hiciste clic en el botón!');
+                    // Aquí podrías añadir lógica para enviar un evento a CAPI
+                    // o cualquier otra función JavaScript que necesites.
+                });
+            }
+
+            // Aquí puedes añadir más scripts o funciones JavaScript
+            // Por ejemplo, para enviar un evento de "carga de página" a CAPI si lo necesitas desde el cliente.
+            // fetch('/tu-api-capi/event/PageView', { method: 'POST', body: JSON.stringify({ /* data */ }) });
+        });
+    </script>
+
+    </body>
+</html>
