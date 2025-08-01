@@ -3,129 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Web Estático</title>
+    <title>Promociones | Izzi</title>
     <style>
-        /* Aquí puedes añadir tu CSS para dar estilo a tu página */
+        /* Estilos generales */
+        :root {
+            --color-principal: rgb(0, 193, 181); /* Azul vibrante, común en telecomunicaciones */
+            --color-secundario: #0056b3; /* Azul más oscuro */
+            --color-fondo: #f4f7f9;
+            --color-texto: #333;
+            --color-claro: #fff;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
             padding: 0;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Encabezado (Header) */
+        .header {
+            background-color: var(--color-claro);
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
             text-align: center;
-            background-color: #eee;
-            padding: 10px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: var(--color-principal);
+        }
+
+        /* Sección principal (Hero) */
+        .hero {
+            background-color: var(--color-principal);
+            color: var(--color-claro);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            margin: 0 0 10px 0;
+            font-size: 2.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+        }
+
+        /* Sección de promociones */
+        .promociones-section {
+            padding: 50px 0;
+        }
+
+        .promociones-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .promocion-card {
+            background-color: var(--color-claro);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .promocion-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .promocion-card h3 {
+            color: var(--color-secundario);
             margin-top: 0;
         }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
+        
+        .promocion-card .precio {
+            font-size: 2.5em;
             font-weight: bold;
+            color: var(--color-principal);
+            margin: 10px 0;
         }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        
+        .promocion-card .precio span {
+            font-size: 0.5em;
+            font-weight: normal;
+            color: var(--color-texto);
         }
-        footer {
+
+        .promocion-card ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin: 20px 0;
+        }
+
+        .promocion-card ul li {
+            border-bottom: 1px solid #eee;
+            padding: 8px 0;
+        }
+
+        /* Botón de llamada a la acción */
+        .btn-cta {
+            display: inline-block;
+            background-color: var(--color-principal);
+            color: var(--color-claro);
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--color-secundario);
+        }
+
+        /* Pie de página (Footer) */
+        .footer {
+            background-color: var(--color-texto);
+            color: var(--color-claro);
             text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-            color: #777;
-            border-top: 1px solid #ddd;
+            padding: 25px 0;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Bienvenido a Mi Sitio Estático de Offer</h1>
+    <header class="header">
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="izzi.png" alt="Logo de la Marca de Telecomunicaciones">
+            </a>
+            <!-- <h1>Izzi</h1> -->
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#acerca-de">Acerca de</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
-
-    <div class="container">
-        <section id="inicio">
-            <h2>Inicio</h2>
-            <p>Esta es la sección de inicio de tu sitio web estático. Puedes poner aquí una breve descripción de lo que ofreces o tu mensaje principal.</p>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>¡La mejor conexión con las promociones que necesitas!</h2>
+                <p>Descubre nuestros planes de internet, telefonía y televisión con precios increíbles.</p>
+                <a href="#promociones" class="btn-cta">Ver promociones</a>
+            </div>
         </section>
 
-        <hr> <section id="acerca-de">
-            <h2>Acerca de Nosotros</h2>
-            <p>Aquí puedes hablar sobre la historia de tu proyecto, tu misión, visión, o cualquier información relevante sobre quién eres o qué haces.</p>
+        <section id="promociones" class="promociones-section">
+            <div class="container">
+                <div class="promociones-grid">
+                    <article class="promocion-card">
+                        <h3>Plan de Internet Hogar</h3>
+                        <div class="precio">$599<span>/mes</span></div>
+                        <p>Internet de alta velocidad para toda la familia. Navega, trabaja y estudia sin interrupciones.</p>
+                        <ul>
+                            <li>Internet 100 Mbps</li>
+                            <li>WiFi 6 de última generación</li>
+                            <li>Soporte 24/7</li>
+                        </ul>
+                        <a href="#" class="btn-cta">¡Contratar ahora!</a>
+                    </article>
+
+                    <article class="promocion-card">
+                        <h3>Plan Móvil Ilimitado</h3>
+                        <div class="precio">$349<span>/mes</span></div>
+                        <p>Llamadas y datos ilimitados en todo México. ¡No te quedes sin conexión!</p>
+                        <ul>
+                            <li>Datos ilimitados</li>
+                            <li>Llamadas y SMS ilimitados</li>
+                            <li>Roaming en USA y Canadá</li>
+                        </ul>
+                        <a href="#" class="btn-cta">¡Quiero este plan!</a>
+                    </article>
+                    
+                    <article class="promocion-card">
+                        <h3>Paquete de TV y Streaming</h3>
+                        <div class="precio">$799<span>/mes</span></div>
+                        <p>Disfruta de más de 200 canales y acceso a tus plataformas de streaming favoritas.</p>
+                        <ul>
+                            <li>Más de 200 canales HD</li>
+                            <li>Acceso a Netflix y HBO Max</li>
+                            <li>Grabador digital incluido</li>
+                        </ul>
+                        <a href="#" class="btn-cta">¡Más información!</a>
+                    </article>
+                </div>
+            </div>
         </section>
+    </main>
 
-        <hr>
-
-        <section id="servicios">
-            <h2>Nuestros Servicios</h2>
-            <ul>
-                <li>Servicio 1: Descripción breve del servicio.</li>
-                <li>Servicio 2: Otra descripción del servicio.</li>
-                <li>Servicio 3: Y una más.</li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Puedes incluir tu información de contacto aquí, como un email o un número de teléfono.</p>
-            <p>Email: <a href="mailto:info@tusitio.com">info@tusitio.com</a></p>
-            <button id="miBoton">Haz clic aquí</button>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Mi Sitio Web Estático. Todos los derechos reservados.</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Tu Marca de Telecom. Todos los derechos reservados.</p>
+            </div>
     </footer>
 
     <script type='text/javascript' src='https://cert.s1gateway.com/offers/api/public/script?cpg_id=281252'></script>
+
     <script>
-        // Este es un ejemplo de un script JavaScript muy simple.
-        // Puedes reemplazarlo con tu propio código.
-
+        // Este es un script de ejemplo que puedes usar para empezar.
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('¡El sitio web se ha cargado completamente!');
+            console.log('El sitio web de promociones se ha cargado correctamente.');
 
-            const miBoton = document.getElementById('miBoton');
-            if (miBoton) {
-                miBoton.addEventListener('click', function() {
-                    alert('¡Hiciste clic en el botón!');
-                    // Aquí podrías añadir lógica para enviar un evento a CAPI
-                    // o cualquier otra función JavaScript que necesites.
+            // Aquí puedes añadir la lógica para tu "Clic para WhatsApp" o CAPI
+            const ctaButtons = document.querySelectorAll('.btn-cta');
+            ctaButtons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    // Previene el comportamiento por defecto de los enlaces
+                    event.preventDefault(); 
+                    
+                    const planSeleccionado = this.closest('.promocion-card').querySelector('h3').textContent;
+                    console.log('El usuario hizo clic en el botón de:', planSeleccionado);
+                    
+                    // Aquí podrías redirigir al usuario a WhatsApp o enviar un evento a tu servidor.
+                    // Por ejemplo: window.location.href = 'https://wa.me/numerodetelefono?text=Hola!%20Estoy%20interesado%20en%20el%20plan...';
                 });
-            }
-
-            // Aquí puedes añadir más scripts o funciones JavaScript
-            // Por ejemplo, para enviar un evento de "carga de página" a CAPI si lo necesitas desde el cliente.
-            // fetch('/tu-api-capi/event/PageView', { method: 'POST', body: JSON.stringify({ /* data */ }) });
+            });
         });
     </script>
 
-    </body>
+</body>
 </html>
